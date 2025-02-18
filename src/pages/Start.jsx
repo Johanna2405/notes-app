@@ -1,8 +1,9 @@
-import { Navigate, useOutletContext } from "react-router";
+import { Navigate } from "react-router";
 import { useState } from "react";
+import { useNotes } from "../context/context";
 
 const Start = () => {
-  const { userName, setUserName } = useOutletContext();
+  const { userName, setUserName } = useNotes();
   const [redirect, setRedirect] = useState(false);
 
   const handleSubmit = (e) => {

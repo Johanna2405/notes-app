@@ -1,17 +1,17 @@
 import { Outlet } from "react-router";
 import Footer from "../components/Footer";
-import { useState } from "react";
+import NotesContextProvider from "../context/NotesContextProvider";
 
 const MainLayout = () => {
-  const [userName, setUserName] = useState("");
-
   return (
-    <div className="flex flex-col min-h-screen">
-      <main className="flex flex-col justify-between py-4 px-6">
-        <Outlet context={{ userName, setUserName }} />
-      </main>
-      <Footer />
-    </div>
+    <NotesContextProvider>
+      <div className="flex flex-col min-h-screen">
+        <main className="flex flex-col justify-between py-4 px-6">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </NotesContextProvider>
   );
 };
 

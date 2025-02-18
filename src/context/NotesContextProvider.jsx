@@ -1,14 +1,12 @@
 import { useState } from "react";
-import { context } from "./context";
+import { NotesContext } from "./context";
 
 const NotesContextProvider = ({ children }) => {
+  const [userName, setUserName] = useState("");
   return (
-    <></>
-    // <NotesContext.Provider
-    //   value={{ setTodos, filter, setFilter, todos, toggleTodo }}
-    // >
-    //   {children}
-    // </NotesContext.Provider>
+    <NotesContext.Provider value={{ userName, setUserName }}>
+      {children}
+    </NotesContext.Provider>
   );
 };
 
