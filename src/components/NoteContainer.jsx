@@ -1,6 +1,9 @@
 import NoteCard from "./NoteCard";
+import { useNotes } from "../context/context";
 
-const NoteContainer = ({ notes }) => {
+const NoteContainer = () => {
+  const { notes } = useNotes();
+
   return (
     <div className="grid grid-cols-2 gap-4">
       {notes.map((note) => (

@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import NotesContextProvider from "./context/NotesContextProvider.jsx";
 import MainLayout from "./layouts/MainLayout.jsx";
-import Home from "./pages/HOme.jsx";
+import Home from "./pages/Home.jsx";
 import EditNote from "./pages/EditNote.jsx";
 import Start from "./pages/Start.jsx";
 

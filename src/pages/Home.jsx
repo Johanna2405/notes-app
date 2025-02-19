@@ -4,7 +4,7 @@ import CreateForm from "../components/CreateForm";
 import NoteContainer from "../components/NoteContainer";
 
 const Home = () => {
-  const { userName, setUserName } = useNotes();
+  const { userName, setUserName, notes, setNotes } = useNotes();
   const modalRef = useRef(null);
 
   const openModal = () => {
@@ -12,19 +12,6 @@ const Home = () => {
       modalRef.current.showModal(); // Open the modal
     }
   };
-
-  const [notes, setNotes] = useState(() => {
-    return JSON.parse(localStorage.getItem("notes")) || [];
-  });
-
-  useEffect(() => {
-    const storedNotes = JSON.parse(localStorage.getItem("notes")) || [];
-    setNotes(storedNotes);
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("notes", JSON.stringify(notes));
-  }, [notes]);
 
   return (
     <div className="flex flex-col gap-8">
@@ -59,7 +46,7 @@ const Home = () => {
         <div className="badge badge-secondary badge-outline">Cat 3</div>
         <div className="badge badge-accent badge-outline">Cat 4</div>
       </div>
-      <NoteContainer notes={notes} />
+      <NoteContainer />
     </div>
   );
 };

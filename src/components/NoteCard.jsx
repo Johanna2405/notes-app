@@ -8,7 +8,7 @@ const NoteCard = ({ note }) => {
       <h4>{title}</h4>
       <p>{text}</p>
       <div className="flex justify-end">
-        <Link to={`note/${id}`}>
+        <Link key={id} to={`/notes/${id}`}>
           <button className="btn">✎</button>
         </Link>
       </div>
