@@ -3,9 +3,10 @@ import { useNotes } from "../context/context";
 import CreateForm from "../components/CreateForm";
 import NoteContainer from "../components/NoteContainer";
 import { useNavigate } from "react-router";
+import CategoriesFilter from "../components/CategoriesFilter";
 
 const Home = () => {
-  const { userName, setUserName, notes, setNotes } = useNotes();
+  const { userName, notes, setNotes } = useNotes();
   const modalRef = useRef(null);
 
   const openModal = () => {
@@ -44,12 +45,13 @@ const Home = () => {
         </div>
       </dialog>
       <h2>Your Notes</h2>
-      <div className="flex gap-4">
+      {/* <div className="flex gap-4">
         <div className="badge badge-outline">Cat 1</div>
         <div className="badge badge-primary badge-outline">Cat 2</div>
         <div className="badge badge-secondary badge-outline">Cat 3</div>
         <div className="badge badge-accent badge-outline">Cat 4</div>
-      </div>
+      </div> */}
+      <CategoriesFilter />
       <NoteContainer />
     </div>
   );

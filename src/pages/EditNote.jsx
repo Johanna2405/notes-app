@@ -77,10 +77,10 @@ const EditNote = () => {
           <option value="" disabled>
             Select category
           </option>
-          <option value="Cat 1">Cat 1</option>
-          <option value="Cat 2">Cat 2</option>
-          <option value="Cat 3">Cat 3</option>
-          <option value="Cat 4">Cat 4</option>
+          <option value="random">Random</option>
+          <option value="food">Food</option>
+          <option value="fitness">Fitness</option>
+          <option value="work">Work</option>
         </select>
         <textarea
           className="textarea textarea-bordered"

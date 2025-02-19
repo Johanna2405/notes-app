@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import { NotesContext } from "./context";
 
 const NotesContextProvider = ({ children }) => {
-  const [userName, setUserName] = useState("");
+  const [userName, setUserName] = useState(() => {
+    return localStorage.getItem("userName") || "";
+  });
+
+  const [categories, setCategories] = useState("all");
 
   const [notes, setNotes] = useState(() => {
     return JSON.parse(localStorage.getItem("notes")) || [];
@@ -13,7 +17,16 @@ const NotesContextProvider = ({ children }) => {
   }, [notes]);
 
   return (
-    <NotesContext.Provider value={{ userName, setUserName, notes, setNotes }}>
+    <NotesContext.Provider
+      value={{
+        userName,
+        setUserName,
+        notes,
+        setNotes,
+        categories,
+        setCategories,
+      }}
+    >
       {children}
     </NotesContext.Provider>
   );

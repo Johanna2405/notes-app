@@ -14,7 +14,9 @@ const Start = () => {
         console.error("Please enter your name");
         return;
       }
-      console.log(userName);
+
+      localStorage.setItem("userName", userName);
+
       setRedirect(true);
     } catch (error) {
       console.error(error);
