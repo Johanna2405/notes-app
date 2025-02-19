@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useNotes } from "../context/context";
 import CreateForm from "../components/CreateForm";
 import NoteContainer from "../components/NoteContainer";
+import { useNavigate } from "react-router";
 
 const Home = () => {
   const { userName, setUserName, notes, setNotes } = useNotes();
@@ -36,7 +37,10 @@ const Home = () => {
               <button className="btn">X</button>
             </form>
           </div>
-          <CreateForm setNotes={setNotes} />
+          <CreateForm
+            setNotes={setNotes}
+            closeModal={() => modalRef.current.close()}
+          />
         </div>
       </dialog>
       <h2>Your Notes</h2>

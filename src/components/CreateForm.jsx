@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const CreateForm = ({ setNotes }) => {
+const CreateForm = ({ setNotes, closeModal }) => {
   const [form, setForm] = useState({
     title: "",
     category: "Cat 1",
@@ -26,6 +26,8 @@ const CreateForm = ({ setNotes }) => {
       category: "Cat 1",
       text: "",
     });
+
+    closeModal();
   };
 
   return (
@@ -37,6 +39,7 @@ const CreateForm = ({ setNotes }) => {
         id="add-form"
       >
         <input
+          required
           value={form.title}
           onChange={handleChange}
           name="title"
@@ -59,6 +62,7 @@ const CreateForm = ({ setNotes }) => {
           <option value="Cat 4">Cat 4</option>
         </select>
         <textarea
+          required
           className="textarea textarea-bordered"
           placeholder="Text"
           name="text"
