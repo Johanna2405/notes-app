@@ -3,7 +3,7 @@ import { NotesContext } from "./context";
 
 const NotesContextProvider = ({ children }) => {
   const [userName, setUserName] = useState(() => {
-    return localStorage.getItem("userName").toLocaleLowerCase() || "";
+    return localStorage.getItem("userName") || "";
   });
 
   const [categories, setCategories] = useState("all");

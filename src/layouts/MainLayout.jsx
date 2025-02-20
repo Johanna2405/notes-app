@@ -5,7 +5,7 @@ import NotesContextProvider from "../context/NotesContextProvider";
 const MainLayout = () => {
   return (
     <NotesContextProvider>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen justify-between">
         <main className="flex flex-col justify-between">
           <Outlet />
         </main>

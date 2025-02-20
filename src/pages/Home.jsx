@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col gap-8 p-10 min-h-screen bg-[#AECEFF]">
-      <h1 className="rozha-one-regular text-7xl text-[#FD724B]">
+      <h1 className="rozha-one-regular text-7xl text-[#FD724B] lowercase">
         hello {userName}! <br />
         how are you doing today?
       </h1>
@@ -33,11 +33,11 @@ const Home = () => {
         </button>
       </div>
 
-      <dialog ref={modalRef} className="modal">
-        <div className="modal-box">
-          <div className="modal-action">
+      <dialog ref={modalRef} className="modal ">
+        <div className="modal-box px-8 bg-[#FD724B]">
+          <div className="modal-action  m-0">
             <form method="dialog">
-              <button className="btn">X</button>
+              <button className="text-3xl text-[#E5DBFD] font-normal">X</button>
             </form>
           </div>
           <CreateForm

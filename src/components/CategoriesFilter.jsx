@@ -19,7 +19,7 @@ const CategoriesFilter = () => {
       <button
         onClick={() => setCatInView("random")}
         className={`border border-[#245FDD] text-light tracking-wide rounded-3xl px-4 py-2 text-[#245FDD] ${
-          categories === "random" ? "bg-[#E5DBFD]" : ""
+          categories === "random" ? "bg-[#d5e5fb]" : ""
         }`}
       >
         Random
@@ -27,7 +27,7 @@ const CategoriesFilter = () => {
       <button
         onClick={() => setCatInView("food")}
         className={`border border-[#A91A3D] text-light tracking-wide rounded-3xl px-4 py-2 text-[#A91A3D] ${
-          categories === "food" ? "bg-[#E5DBFD]" : ""
+          categories === "food" ? "bg-[#ebe4fc]" : ""
         }`}
       >
         Food
@@ -35,7 +35,7 @@ const CategoriesFilter = () => {
       <button
         onClick={() => setCatInView("fitness")}
         className={`border border-[#FD724B] text-light tracking-wide rounded-3xl px-4 py-2 text-[#FD724B] ${
-          categories === "fitness" ? "bg-[#E5DBFD]" : ""
+          categories === "fitness" ? "bg-[#fdece7]" : ""
         }`}
       >
         Fitness
@@ -43,7 +43,7 @@ const CategoriesFilter = () => {
       <button
         onClick={() => setCatInView("work")}
         className={`border border-[#d42f79] text-light tracking-wide rounded-3xl px-4 py-2 text-[#d42f79] ${
-          categories === "work" ? "bg-[#E5DBFD]" : ""
+          categories === "work" ? "bg-[#fae1ed]" : ""
         }`}
       >
         Work

@@ -34,10 +34,12 @@ const CreateForm = ({ setNotes, closeModal }) => {
   };
 
   return (
-    <div className=" flex flex-col gap-4 p-8 bg-slate-200 rounded-2xl">
-      <h2>Create a note</h2>
+    <div className=" flex flex-col gap-4 px-4  m-x4 rounded-2xl">
+      <h2 className="rozha-one-regular text-5xl text-[#E5DBFD]">
+        Create a note
+      </h2>
       <form
-        className="flex flex-col gap-2"
+        className="flex flex-col gap-3"
         onSubmit={handleSubmit}
         id="add-form"
       >
@@ -48,10 +50,10 @@ const CreateForm = ({ setNotes, closeModal }) => {
           name="title"
           type="text"
           placeholder="Title"
-          className="input input-bordered w-full"
+          className="input bg-slate-100 input-bordered w-full tracking-wide text-light text-[#431D5A] text-md"
         />
         <select
-          className="select select-bordered w-full "
+          className="select select-bordered bg-slate-100 w-full text-md tracking-wide text-light text-[#431D5A]"
           name="category"
           value={form.category}
           onChange={handleChange}
@@ -66,15 +68,18 @@ const CreateForm = ({ setNotes, closeModal }) => {
         </select>
         <textarea
           required
-          className="textarea textarea-bordered"
+          className="textarea textarea-bordered bg-slate-100 text-md w-full tracking-wide text-light text-[#431D5A]"
           placeholder="Text"
           name="text"
           value={form.text}
           onChange={handleChange}
         ></textarea>
         <div className="flex gap-4 py-4">
-          <button className="btn btn-primary" type="submit">
-            Save
+          <button
+            className="btn bg-[#D0E77D] hover:bg-[#E5DBFD] border-[#D0E77D] rozha-one-regular text-[#431D5A] text-xl"
+            type="submit"
+          >
+            save
           </button>
         </div>
       </form>

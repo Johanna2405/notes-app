@@ -41,7 +41,7 @@ const Start = () => {
               onChange={(e) => setUserName(e.target.value)}
               type="text"
               placeholder="Your name"
-              className="input input-bordered w-full tracking-wide text-light text-[#431D5A]"
+              className="input input-bordered bg-slate-100 w-full tracking-wide text-light text-[#431D5A]"
             />
             {/* <select className="select select-bordered w-full max-w-xs">
             <option disabled selected>

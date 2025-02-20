@@ -53,54 +53,73 @@ const EditNote = () => {
   };
 
   return (
-    <div className="flex flex-col gap-8">
-      <h1>Edit Note</h1>
-      <form
-        className="flex flex-col gap-2"
-        onSubmit={handleSubmit}
-        id="edit-form"
-      >
-        <input
-          value={form.title}
-          onChange={handleChange}
-          name="title"
-          type="text"
-          placeholder="Title"
-          className="input input-bordered w-full"
-        />
-        <select
-          className="select select-bordered w-full"
-          name="category"
-          value={form.category}
-          onChange={handleChange}
-        >
-          <option value="" disabled>
-            Select category
-          </option>
-          <option value="random">Random</option>
-          <option value="food">Food</option>
-          <option value="fitness">Fitness</option>
-          <option value="work">Work</option>
-        </select>
-        <textarea
-          className="textarea textarea-bordered"
-          placeholder="Text"
-          name="text"
-          value={form.text}
-          onChange={handleChange}
-        ></textarea>
-        <div className="flex gap-4 py-4">
-          <button className="btn btn-primary" type="submit">
-            Save
-          </button>
-          <button className="btn btn-error" type="button" onClick={deleteNote}>
-            Delete note
-          </button>
-          <button className="btn" type="button" onClick={() => navigate(-1)}>
+    <div className="flex flex-col  justify-center items-center min-h-screen bg-[#E5DBFD] p-10">
+      <div className="flex flex-col gap-8 w-4/5 p-8 border border-[#431D5A] rounded-2xl">
+        <div className="  flex justify-between">
+          <h1 className="rozha-one-regular text-5xl text-[#431D5A]">
+            edit note
+          </h1>
+          <button
+            className="text-3xl text-[#431D5A] font-normal"
+            type="button"
+            onClick={() => navigate(-1)}
+          >
             X
           </button>
         </div>
-      </form>
+        <form
+          className="flex flex-col gap-2"
+          onSubmit={handleSubmit}
+          id="edit-form"
+        >
+          <input
+            value={form.title}
+            onChange={handleChange}
+            name="title"
+            type="text"
+            placeholder="Title"
+            className="input input-bordered bg-slate-100 w-full tracking-wide text-light text-[#431D5A] text-md"
+          />
+          <select
+            className="select select-bordered bg-slate-100 w-full text-md tracking-wide text-light text-[#431D5A]"
+            name="category"
+            value={form.category}
+            onChange={handleChange}
+          >
+            <option value="" disabled>
+              Select category
+            </option>
+            <option value="random">Random</option>
+            <option value="food">Food</option>
+            <option value="fitness">Fitness</option>
+            <option value="work">Work</option>
+          </select>
+          <textarea
+            className="textarea textarea-bordered text-md bg-slate-100 w-full tracking-wide text-light text-[#431D5A]"
+            placeholder="Text"
+            name="text"
+            value={form.text}
+            onChange={handleChange}
+          ></textarea>
+          <div className="flex justify-between gap-4 py-4">
+            <div className="flex gap-4">
+              <button
+                className="btn bg-[#D0E77D] hover:bg-[#E5DBFD] border-[#D0E77D] rozha-one-regular text-[#431D5A] text-xl"
+                type="submit"
+              >
+                save
+              </button>
+              <button
+                className="btn bg-[#FD724B] hover:bg-[#D0E77D] border-[#FD724B] rozha-one-regular text-[#431D5A] text-xl"
+                type="button"
+                onClick={deleteNote}
+              >
+                delete note
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
