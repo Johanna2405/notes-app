@@ -28,18 +28,20 @@ const Start = () => {
   }
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen gap-8">
+    <div className="bg-[#FD724B] flex flex-col justify-center items-center min-h-screen gap-8 p-10">
+      <img src="/logo.svg" alt="Logo" className="w-56 py-8" />
       <div className="card bg-primary text-primary-content w-96">
-        <div className="card-body items-center gap-4">
-          <img src="/src/assets/logoipsum-284.svg" alt="Logo" />
-          <h2 className="card-title">What is your name?</h2>
+        <div className=" flex flex-col items-center justify-center gap-4 bg-[#E5DBFD] p-8 rounded-2xl">
+          <h2 className=" tracking-normal card-title text-[#431D5A] text-center font-light">
+            What is your name?
+          </h2>
           <form onSubmit={handleSubmit}>
             <input
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
               type="text"
               placeholder="Your name"
-              className="input input-bordered w-full max-w-xs"
+              className="input input-bordered w-full tracking-wide text-light text-[#431D5A]"
             />
             {/* <select className="select select-bordered w-full max-w-xs">
             <option disabled selected>
@@ -57,7 +59,9 @@ const Start = () => {
             <option>🖋️ TTPD</option>
           </select> */}
             <div className="card-actions justify-center">
-              <button className="btn">Let's go</button>
+              <button className="btn mt-4 bg-[#D0E77D] hover:bg-[#E5DBFD] border-[#D0E77D] rozha-one-regular text-[#431D5A] text-xl ">
+                let's go
+              </button>
             </div>
           </form>
         </div>

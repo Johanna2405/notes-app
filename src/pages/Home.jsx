@@ -16,15 +16,17 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col gap-8">
-      <h1>
-        Hello {userName}! <br />
-        How are you doing today?
+    <div className="flex flex-col gap-8 p-10 min-h-screen bg-[#AECEFF]">
+      <h1 className="rozha-one-regular text-7xl text-[#FD724B]">
+        hello {userName}! <br />
+        how are you doing today?
       </h1>
-      <div className="bg-slate-200 rounded-2xl p-8 flex justify-between items-center">
-        <h3>Feel free to create a new note</h3>
+      <div className="flex justify-between items-center mt-4">
+        <h3 className=" tracking-normal card-title text-[#431D5A] text-2xl text-center font-light">
+          Feel free to create a new note
+        </h3>
         <button
-          className="p-2 bg-slate-400 rounded-full text-5xl"
+          className="p-2 bg-[#D0E77D] rounded-full text-5xl hover:bg-[#E5DBFD] text-[#431D5A]"
           onClick={openModal}
         >
           ＋
@@ -44,13 +46,8 @@ const Home = () => {
           />
         </div>
       </dialog>
-      <h2>Your Notes</h2>
-      {/* <div className="flex gap-4">
-        <div className="badge badge-outline">Cat 1</div>
-        <div className="badge badge-primary badge-outline">Cat 2</div>
-        <div className="badge badge-secondary badge-outline">Cat 3</div>
-        <div className="badge badge-accent badge-outline">Cat 4</div>
-      </div> */}
+      <h2 className="rozha-one-regular text-4xl text-[#431D5A]">your notes</h2>
+
       <CategoriesFilter />
       <NoteContainer />
     </div>

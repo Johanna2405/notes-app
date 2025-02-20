@@ -17,7 +17,9 @@ const NoteContainer = () => {
           .reverse()
           .map((note) => <NoteCard key={note.id} note={note} />)
       ) : (
-        <p>No notes in this category.</p>
+        <p className="text-light tracking-wiede text-lg text-[#431D5A] ">
+          No notes in this category.
+        </p>
       )}
     </div>
   );

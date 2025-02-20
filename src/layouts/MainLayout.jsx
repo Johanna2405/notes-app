@@ -6,7 +6,7 @@ const MainLayout = () => {
   return (
     <NotesContextProvider>
       <div className="flex flex-col min-h-screen">
-        <main className="flex flex-col justify-between py-4 px-6">
+        <main className="flex flex-col justify-between">
           <Outlet />
         </main>
         <Footer />
