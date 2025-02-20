@@ -5,7 +5,7 @@ const NoteCard = ({ note }) => {
 
   return (
     <div
-      className={`rounded-2xl p-8 flex flex-col gap-4 ${
+      className={`rounded-2xl p-8 flex flex-col gap-4 justify-between ${
         category === "random" ? "bg-[#d5e5fb]" : ""
       } ${category === "food" ? "bg-[#ebe4fc]" : ""}
       ${category === "fitness" ? "bg-[#fdece7]" : ""}
@@ -17,7 +17,7 @@ const NoteCard = ({ note }) => {
         {category}
       </div>
       <h4
-        className={`rozha-one-regular text-2xl ${
+        className={`rozha-one-regular text-2xl lowercase ${
           category === "random" ? "text-[#245FDD]" : ""
         } 
         ${category === "food" ? "text-[#A91A3D]" : ""} 
