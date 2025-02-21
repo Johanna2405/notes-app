@@ -2,9 +2,11 @@ import { useState, useEffect, useRef } from "react";
 import { useNotes } from "../context/context";
 import CreateForm from "../components/CreateForm";
 import NoteContainer from "../components/NoteContainer";
+import { useNavigate } from "react-router";
+import CategoriesFilter from "../components/CategoriesFilter";
 
 const Home = () => {
-  const { userName, setUserName } = useNotes();
+  const { userName, notes, setNotes } = useNotes();
   const modalRef = useRef(null);
 
   const openModal = () => {
@@ -13,53 +15,41 @@ const Home = () => {
     }
   };
 
-  const [notes, setNotes] = useState(() => {
-    return JSON.parse(localStorage.getItem("notes")) || [];
-  });
-
-  useEffect(() => {
-    const storedNotes = JSON.parse(localStorage.getItem("notes")) || [];
-    setNotes(storedNotes);
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem("notes", JSON.stringify(notes));
-  }, [notes]);
-
   return (
-    <div className="flex flex-col gap-8">
-      <h1>
-        Hello {userName}! <br />
-        How are you doing today?
+    <div className="flex flex-col gap-8 p-10 min-h-screen bg-[#AECEFF]">
+      <h1 className="rozha-one-regular text-7xl text-[#FD724B] lowercase">
+        hello {userName}! <br />
+        how are you doing today?
       </h1>
-      <div className="bg-slate-200 rounded-2xl p-8 flex justify-between items-center">
-        <h3>Feel free to create a new note</h3>
+      <div className="flex justify-between items-center mt-4">
+        <h3 className=" tracking-normal card-title text-[#431D5A] text-2xl text-center font-light">
+          Feel free to create a new note
+        </h3>
         <button
-          className="p-2 bg-slate-400 rounded-full text-5xl"
+          className="p-2 bg-[#D0E77D] rounded-full text-5xl hover:bg-[#E5DBFD] text-[#431D5A]"
           onClick={openModal}
         >
           ＋
         </button>
       </div>
 
-      <dialog ref={modalRef} className="modal">
-        <div className="modal-box">
-          <div className="modal-action">
+      <dialog ref={modalRef} className="modal ">
+        <div className="modal-box px-8 bg-[#FD724B]">
+          <div className="modal-action  m-0">
             <form method="dialog">
-              <button className="btn">X</button>
+              <button className="text-3xl text-[#E5DBFD] font-normal">X</button>
             </form>
           </div>
-          <CreateForm setNotes={setNotes} />
+          <CreateForm
+            setNotes={setNotes}
+            closeModal={() => modalRef.current.close()}
+          />
         </div>
       </dialog>
-      <h2>Your Notes</h2>
-      <div className="flex gap-4">
-        <div className="badge badge-outline">Cat 1</div>
-        <div className="badge badge-primary badge-outline">Cat 2</div>
-        <div className="badge badge-secondary badge-outline">Cat 3</div>
-        <div className="badge badge-accent badge-outline">Cat 4</div>
-      </div>
-      <NoteContainer notes={notes} />
+      <h2 className="rozha-one-regular text-4xl text-[#431D5A]">your notes</h2>
+
+      <CategoriesFilter />
+      <NoteContainer />
     </div>
   );
 };
