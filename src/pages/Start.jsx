@@ -59,7 +59,7 @@ const Start = () => {
             <option>🖋️ TTPD</option>
           </select> */}
             <div className="card-actions justify-center">
-              <button className="btn mt-4 bg-[#D0E77D] hover:bg-[#E5DBFD] border-[#D0E77D] rozha-one-regular text-[#431D5A] text-xl ">
+              <button className="btn mt-4 bg-[#D0E77D] hover:bg-[#E5DBFD] border-[#D0E77D] font-Rozha text-[#431D5A] text-xl ">
                 let's go
               </button>
             </div>

@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col gap-8 p-10 min-h-screen bg-[#AECEFF]">
-      <h1 className="rozha-one-regular text-7xl text-[#FD724B] lowercase">
+      <h1 className="font-Rozha text-7xl text-[#FD724B] lowercase">
         hello {userName}! <br />
         how are you doing today?
       </h1>
@@ -46,7 +46,7 @@ const Home = () => {
           />
         </div>
       </dialog>
-      <h2 className="rozha-one-regular text-4xl text-[#431D5A]">your notes</h2>
+      <h2 className="font-Rozha text-4xl text-[#431D5A]">your notes</h2>
 
       <CategoriesFilter />
       <NoteContainer />

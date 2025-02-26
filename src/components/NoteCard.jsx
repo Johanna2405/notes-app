@@ -17,7 +17,7 @@ const NoteCard = ({ note }) => {
         {category}
       </div>
       <h4
-        className={`rozha-one-regular text-2xl lowercase ${
+        className={`font-Rozha text-2xl lowercase ${
           category === "random" ? "text-[#245FDD]" : ""
         } 
         ${category === "food" ? "text-[#A91A3D]" : ""} 
