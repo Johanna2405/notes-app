@@ -1,17 +1,16 @@
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useNotes } from "../context/context";
 import CreateForm from "../components/CreateForm";
 import NoteContainer from "../components/NoteContainer";
-import { useNavigate } from "react-router";
 import CategoriesFilter from "../components/CategoriesFilter";
 
 const Home = () => {
-  const { userName, notes, setNotes } = useNotes();
+  const { userName, setNotes } = useNotes();
   const modalRef = useRef(null);
 
   const openModal = () => {
     if (modalRef.current) {
-      modalRef.current.showModal(); // Open the modal
+      modalRef.current.showModal();
     }
   };
 
@@ -21,8 +20,8 @@ const Home = () => {
         hello {userName}! <br />
         how are you doing today?
       </h1>
-      <div className="flex justify-between items-center mt-4">
-        <h3 className=" tracking-normal card-title text-[#431D5A] text-2xl text-center font-light">
+      <div className="flex justify-between items-center mt-4 md:justify-start gap-8">
+        <h3 className="tracking-normal card-title text-[#431D5A] text-2xl text-left font-light">
           Feel free to create a new note
         </h3>
         <button
