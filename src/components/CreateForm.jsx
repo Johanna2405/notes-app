@@ -35,7 +35,7 @@ const CreateForm = ({ setNotes, closeModal }) => {
 
   return (
     <div className=" flex flex-col gap-4 px-4  m-x4 rounded-2xl">
-      <h2 className="rozha-one-regular text-5xl text-[#E5DBFD]">
+      <h2 className="font-Rozha text-5xl lowercase text-[#E5DBFD]">
         Create a note
       </h2>
       <form
@@ -76,7 +76,7 @@ const CreateForm = ({ setNotes, closeModal }) => {
         ></textarea>
         <div className="flex gap-4 py-4">
           <button
-            className="btn bg-[#D0E77D] hover:bg-[#E5DBFD] border-[#D0E77D] rozha-one-regular text-[#431D5A] text-xl"
+            className="btn bg-[#D0E77D] hover:bg-[#E5DBFD] border-[#D0E77D] font-Rozha text-[#431D5A] text-xl"
             type="submit"
           >
             save
