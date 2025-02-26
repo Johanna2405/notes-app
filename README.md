@@ -1,3 +1,5 @@
 # typo notes app 
 
-Simple an colorful notes app to create, edit & delete notes. 
+Simple and colorful notes app to create, edit & delete notes. 
+
+Using React, Node.js & PostgreSQL.
