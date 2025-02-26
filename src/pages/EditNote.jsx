@@ -53,8 +53,8 @@ const EditNote = () => {
   };
 
   return (
-    <div className="flex flex-col  justify-center items-center min-h-screen bg-[#E5DBFD] p-10">
-      <div className="flex flex-col gap-8 w-4/5 p-8 border border-[#431D5A] rounded-2xl">
+    <div className="flex flex-col  justify-center items-center min-h-screen bg-[#E5DBFD] p-8">
+      <div className="flex flex-col gap-8 w-full md:w-2/3 lg:w-1/2 p-8 border border-[#431D5A] rounded-2xl">
         <div className="  flex justify-between">
           <h1 className="font-Rozha text-5xl text-[#431D5A]">edit note</h1>
           <button

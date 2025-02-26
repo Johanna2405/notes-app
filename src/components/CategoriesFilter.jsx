@@ -7,7 +7,7 @@ const CategoriesFilter = () => {
   };
 
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex gap-4 items-center flex-wrap">
       <button
         onClick={() => setCatInView("all")}
         className={`border border-[#431D5A] text-light tracking-wide rounded-3xl px-4 py-2 text-[#431D5A] ${

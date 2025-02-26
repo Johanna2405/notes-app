@@ -5,7 +5,7 @@ const NoteCard = ({ note }) => {
 
   return (
     <div
-      className={`rounded-2xl p-8 flex flex-col gap-4 justify-between ${
+      className={`rounded-2xl p-6 flex flex-col gap-4 overflow-hidden justify-between ${
         category === "random" ? "bg-[#d5e5fb]" : ""
       } ${category === "food" ? "bg-[#ebe4fc]" : ""}
       ${category === "fitness" ? "bg-[#fdece7]" : ""}
