@@ -15,8 +15,8 @@ const Home = () => {
   };
 
   return (
-    <div className="flex flex-col gap-8 p-10 min-h-screen bg-[#AECEFF]">
-      <h1 className="font-Rozha text-7xl text-[#FD724B] lowercase">
+    <div className="flex flex-col gap-8 py-10 px-6 min-h-screen bg-[#AECEFF]">
+      <h1 className="font-Rozha text-5xl text-[#FD724B] lowercase">
         hello {userName}! <br />
         how are you doing today?
       </h1>
